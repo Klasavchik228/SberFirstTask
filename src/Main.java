@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -27,9 +28,11 @@ public class Main {
                 word = "";
                 cities.add(new City(lineList.get(1),lineList.get(2),lineList.get(3),Integer.valueOf(lineList.get(4)),lineList.get(5)));
             }
-            for(City city : cities ){
-                city.printCity();
-            }
+            //City.sortNameCity(cities);
+            //City.sortNameCityAndDistrict(cities);
+            //for(City city : cities ){city.printCity();}
+            //System.out.println(City.maxPopulation(cities));
+            City.numberOfCities(cities);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
